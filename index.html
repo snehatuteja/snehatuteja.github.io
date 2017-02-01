@@ -314,6 +314,9 @@ img {
 }
 .Aboutmepopup{
     background-image: url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     margin: auto;
     padding: 0;
@@ -338,7 +341,7 @@ p.big {
 }
 </style>
 </head>
-<body style="background-color:#CAC9CA;">
+<body style="background-color:#0D0D0B;">
 <div class="bg">
   <br>
   
@@ -356,9 +359,14 @@ p.big {
 </div>
 <center><h2></h2></center>
 <center><div id="scrolldown">
-<img id="myImg" src="incarceration.png" width="450" height="250">
-<img id="sketches" src="2.jpg" width="350" height="250">
-<a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="520" height="250"></a>
+  <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="miniproj" src="mini.png" width="26.5%" height="200"></a>
+  <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="26.5%" height="200">
+  </a>
+<img id="myImg" src="incarceration.png" width="26.5%" height="200">
+<img id="sketches" src="2.jpg" width="19%" height="200">
+
+
+
 </div>
 </center>
 <!-- The Modal -->
@@ -368,7 +376,7 @@ p.big {
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <center><h3>Modal Header</h3></center>
+      <center><h3>YouTube Video</h3></center>
     </div>
     <div class="modal-body">
       <p><center><a href="https://bbcdn.githack.com/snehatuteja/visualanalytics/raw/9eeb62a1b22f52bf899c7388ae77333e4e49115c/index.html" style="color:#000">Click Me</a></center></p>
@@ -411,20 +419,26 @@ p.big {
 <div class="slideshow-container">
 <br>
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
+  <div class="numbertext">1 / 4</div>
   <center><img src="1.jpg" height="300" width="300"></center>
   
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
+  <div class="numbertext">2 / 4</div>
   <center><img src="2.jpg" height="300" width="350"></center>
   
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
+  <div class="numbertext">3 / 4</div>
   <center><img src="3.jpeg" height="300" width="=250"></center>
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <center><img src="4.jpg" height="300" width="=250"></center>
  
 </div>
 
@@ -432,6 +446,7 @@ p.big {
 <br>
 
 <div style="text-align:center">
+  <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
