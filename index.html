@@ -339,6 +339,24 @@ h2{
 p.big {
     line-height: 150%;
 }
+.workex{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  color: #888;
+  text-align: left;
+}
+a:hover{
+  opacity: 0.6;
+  cursor: pointer;
+
+}
+.sketches:hover{
+opacity: 0.6;
+  cursor: pointer;
+
+
+}
+
 </style>
 </head>
 <body style="background-color:#0D0D0B;">
@@ -354,18 +372,40 @@ p.big {
 <br>
 <br>
 <center><button id = "workbutton"class="button" style="vertical-align:middle"><span>My work</span></button>
+        <button id = "workexbutton"class="button" style="vertical-align:middle"><span>Experience</span></button>
         <button id = "aboutmebutton"class="button" style="vertical-align:middle"><span>About Me</span></button>
 </center>
 </div>
 <center><h2></h2></center>
 <center><div id="scrolldown">
-  <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="miniproj" src="mini.png" width="26.5%" height="200"></a>
-  <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="26.5%" height="200">
+  <div class="intro" style="margin-top:-4%; text-align:left; font-size:32px">My Work Samples</div>
+  <br>
+  <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="miniproj" src="mini.png" width="35%" height="255"></a>
+  <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="35%" height="255">
   </a>
-<img id="myImg" src="incarceration.png" width="26.5%" height="200">
-<img id="sketches" src="2.jpg" width="19%" height="200">
+  <br>
+  <br>
+<img id="myImg" src="incarceration.png" width="35%" height="255" class="sketches">
+<img id="sketches" src="2.jpg" width="35%" height="255" class="sketches">
 
 
+
+</div>
+</center>
+
+<center><h2></h2></center>
+<center><div id="scrollthrice">
+  <div class="intro" style="margin-top:2%; text-align:left; font-size:32px">Professional Experience</div>
+  <br>
+  <ul class="workex">
+    <li> Graduate Research Assistant (August 2016 - December 2016) : Biomedical Visualization in UIC
+
+    </li>
+<br>
+    <li> Summer Research Assistant (May 2016 - July 2016) : Electronic Visualization Laboratory 
+    </li>
+
+  </ul>
 
 </div>
 </center>
@@ -489,6 +529,12 @@ $(document).ready(function(){
 $("#workbutton").click(function() {
     $('html,body').animate({
         scrollTop: $("#scrolldown").offset().top},
+        'slow');
+});
+
+$("#workexbutton").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#scrollthrice").offset().top},
         'slow');
 });
 var modal = document.getElementById('myModal');
