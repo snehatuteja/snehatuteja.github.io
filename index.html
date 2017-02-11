@@ -6,7 +6,7 @@
 html, body { 
     width:100%;
     height: 100%;
-    margin: 0;
+   margin: 0px;
 }
 ​
 body {
@@ -17,9 +17,6 @@ body {
 .bg {
     /* The image used */
     background-image: url('bg1.jpg');
- /*  opacity: 0.5; 
-
-    /* Full height */
     height: 100%; 
 
     /* Center and scale the image nicely */
@@ -76,9 +73,11 @@ h1{
 .close {
     color: white;
     float: right;
+    width: 25px;
+    background-color: #423D3D;
     font-size: 28px;
     font-weight: bold;
-    margin-right: 15px;
+    margin-right: 28px;
     margin-top: 10px;
 }
 .closesketch {
@@ -102,6 +101,7 @@ h1{
     color: #938B8B;
     text-decoration: none;
     cursor: pointer;
+    background-color: #423D3D;
 }
 
 .closesketch:hover,
@@ -226,6 +226,7 @@ img {
   font-weight: bold;
   padding-left: 15px;
   margin-top: -3px;
+  opacity: 0.5;
   
 }
 
@@ -360,7 +361,7 @@ a:hover{
   -ms-transition: left 0.4s ease-in-out;
   -moz-transition: left 0.4s ease-in-out;
   -webkit-transition: left 0.4s ease-in-out;
-  z-index: 1;
+
 }
 #panel h2, #panel p{
   padding:17px;
@@ -425,11 +426,13 @@ a:hover{
     
     
     <center>
-
-       <button id = "homexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Home</span></button> 
-        <button id = "workbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>My work</span></button>
         
+        <button id = "homexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Home</span></button> 
+        <br>
+        <button id = "workbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>My work</span></button>
+        <br>
         <button id = "workexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Experience</span></button>
+        <br>
         <button id = "aboutmebutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>About Me</span></button>
 </center>
   </div>
@@ -447,8 +450,11 @@ a:hover{
 </div>
 <center><h2></h2></center>
 <center><div id="scrolldown">
+
+
   <div class="intro" style="margin-top:-4%; text-align:left; font-size:32px">My Work Samples</div>
   <br>
+
   <a href="#myModalminiproj" class="btn btn-lg btn-primary" data-toggle="modal"><img id="miniproj" src="mini.png" width="35%" height="255"></a>
   <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="35%" height="255">
   </a>
@@ -570,6 +576,7 @@ a:hover{
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
+                   
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <center><h4 class="modal-title">YouTube Video</h4></center>
                 </div>
