@@ -2,9 +2,16 @@
 <html>
 <head>
 <style>
-body, html {
+
+html, body { 
+    width:100%;
     height: 100%;
     margin: 0;
+}
+​
+body {
+    box-shadow: inset 0 0 490px white;
+  /*  background: url('image.jpg'); */
 }
 
 .bg {
@@ -206,7 +213,7 @@ img {
   font-size: 45px;
  
   background-color: #000;
-  opacity: 0.7;
+  opacity: 0.9;
   height: 50px;
 
   padding-left: 15px;
@@ -221,59 +228,41 @@ img {
   margin-top: -3px;
   
 }
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-  opacity: 0.6;
-  border-radius: 3px;
-  border: 0.7px solid #000;
-  color: #000;
-  text-align: center;
-  font-size: 18px;
-  padding: 5px;
-  width: 160px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 7px;
-  font-family: "Times New Roman", Times, serif;
-}
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
+button {
+  border: none;
+  background: #9E8A5A;
+  color: #f2f2f2;
+  padding: 13px;
+  width: 95%;
+  font-size: 15px;
+  border-radius: 5px;
   position: relative;
-  transition: 0.5s;
+  box-sizing: border-box;
+  transition: all 500ms ease; 
 }
-.button:hover{
-  background-color: #B8ADAD;
 
-}
-.button span:after {
-  
+button:before {
+  content:'';
   position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 43px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 5px;
+  transition: all 2s ease;
+} 
+button:hover:before {
+  width: 100%;
 }
-
-.button:hover span {
-  padding-right: 25px;
-
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 
 .aboutme{
    font-family: "Times New Roman", Times, serif;
    font-size: 20px;
 
 }
+
 .linkedin{
   background-color: #C38642;
     width: 40%;
@@ -348,33 +337,113 @@ p.big {
 a:hover{
   opacity: 0.6;
   cursor: pointer;
-
+  
 }
+
 .sketches:hover{
-opacity: 0.6;
+  opacity: 0.6;
   cursor: pointer;
+  box-shadow: inset 0 0 7px 5px #000;
+ } 
+
+ #panel{
+  position:fixed;
+  background:#000;
+  color:#fff;
+  height:100%;
+  width:200px; 
+  left:-200px;
+  top: 2px;
+  opacity: 1;
+  transition: left 0.4s ease-in-out;
+  -o-transition: left 0.4s ease-in-out;
+  -ms-transition: left 0.4s ease-in-out;
+  -moz-transition: left 0.4s ease-in-out;
+  -webkit-transition: left 0.4s ease-in-out;
+  z-index: 1;
+}
+#panel h2, #panel p{
+  padding:17px;
+  z-index: 1;
+}
+#panelCaller{
+  position:absolute;
+  top: 2px;
+  font-size: 20px;
+  left:200px;
+  padding:30px 10px;
+  background:#000; 
+  opacity: 0.9;
+  z-index: 1;
+}
+#panel:hover{
+  left:0px;
+  opacity: 0.9;
+}
+
+
+.scrollToTop{
+  width:30px; 
+  height:30px;
+  padding:10px; 
+  text-align:center; 
+  background: white;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  position:fixed;
+  top:155px;
+  right:100px;
+  display:none;
+  font-size: 20px;
+  background:url('http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/ultra-glossy-silver-buttons-icons-media/001663-ultra-glossy-silver-button-icon-media-media2-arrow-up.png');
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}
+.imagetop{
+  width: 70px;
+  height: 70px;
+  margin-top: 320px;
 
 
 }
-
 </style>
 </head>
 <body style="background-color:#0D0D0B;">
 <div class="bg">
   <br>
-  
-  
-<center><div class="intro">
+
+
+ 
+<center><div class="intro" id ="top">
  SNEHA TUTEJA
  <p class = "intronote">a UI and Data Visualization engineer</p>
+<a href="#" class="scrollToTop"><img src="arrow.png" class="imagetop"></a>
+<div id="panel">
+    <div id="panelCaller">Menu</div>
+    
+    
+    <center>
+
+       <button id = "homexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Home</span></button> 
+        <button id = "workbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>My work</span></button>
+        
+        <button id = "workexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Experience</span></button>
+        <button id = "aboutmebutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>About Me</span></button>
+</center>
+  </div>
+
+
 </div> </center>
 
 <br>
 <br>
-<center><button id = "workbutton"class="button" style="vertical-align:middle"><span>My work</span></button>
+
+<!--<center><button id = "workbutton"class="button" style="vertical-align:middle"><span>My work</span></button>
         <button id = "workexbutton"class="button" style="vertical-align:middle"><span>Experience</span></button>
         <button id = "aboutmebutton"class="button" style="vertical-align:middle"><span>About Me</span></button>
-</center>
+</center>-->
 </div>
 <center><h2></h2></center>
 <center><div id="scrolldown">
@@ -421,7 +490,7 @@ opacity: 0.6;
     
     <div class="modal-body">
       <h2>About Me</h2>
-      <p class= "big" style="color:#B1AFAD; width:60%; float:right; margin-top:-2%"><i>Hi, I am 23 years old, pursuing my masters in Computer Science. I love designing and data visualization. I like clean and elegant designs. I always want to create unique and high quality designs.</i></p>
+      <p class= "big" style="color:#B1AFAD; width:60%; float:right; margin-top:-2%"><i>Hi, I am 23 years old, pursuing my Masters in Computer Science. I love designing and data visualization. I like clean and elegant designs. I always want to create unique and high quality designs.</i></p>
       
       <a href="RESUME.png" class="resume" target="_blank">Resume</a>
       <a href="https://www.linkedin.com/in/sneha-tuteja-5909bb108" class="linkedin" target="_blank">LinkedIn</a>
@@ -531,6 +600,12 @@ opacity: 0.6;
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script>
+
+function closeNav() {
+    document.getElementById("menubar").style.width = 0;
+    document.getElementById("panel").style.opacity=0;
+}
+
 $(document).ready(function(){
     
     var url = $("#aerialvideo").attr('src');
@@ -544,6 +619,7 @@ $(document).ready(function(){
     });
 })
 
+*
 $("#workbutton").click(function() {
     $('html,body').animate({
         scrollTop: $("#scrolldown").offset().top},
@@ -624,6 +700,25 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+$(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+
 </script>
 
 </body>
