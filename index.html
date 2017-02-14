@@ -209,7 +209,7 @@ img {
 }
 .intro{
   font-family: "Times New Roman", Times, serif;
-  color: #E59F20;
+  color: #E05D2F;
   font-size: 45px;
  
   background-color: #000;
@@ -226,13 +226,13 @@ img {
   font-weight: bold;
   padding-left: 15px;
   margin-top: -3px;
-  opacity: 0.5;
+  opacity: 0.8;
   
 }
 
 button {
   border: none;
-  background: #9E8A5A;
+  background: #863518;
   color: #f2f2f2;
   padding: 13px;
   width: 95%;
@@ -265,7 +265,7 @@ button:hover:before {
 }
 
 .linkedin{
-  background-color: #C38642;
+  background-color: #863518;
     width: 40%;
     height: 35px;
     color: white;
@@ -284,7 +284,7 @@ button:hover:before {
 }
 
 .resume{
-  background-color: #C38642;
+  background-color: #863518;
     width: 40%;
     height: 35px;
     color: white;
@@ -332,14 +332,14 @@ p.big {
 .workex{
   font-family: "Times New Roman", Times, serif;
   font-size: 22px;
-  color: #888;
+  color: #fff;
   text-align: left;
 }
-a:hover{
+/*a:hover{
   opacity: 0.6;
   cursor: pointer;
   
-}
+}*/
 
 .sketches:hover{
   opacity: 0.6;
@@ -393,7 +393,7 @@ a:hover{
   color: #fff;
   text-decoration: none;
   position:fixed;
-  top:155px;
+  top:200px;
   right:100px;
   display:none;
   font-size: 20px;
@@ -406,12 +406,45 @@ a:hover{
   width: 70px;
   height: 70px;
   margin-top: 320px;
-
-
 }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #652711;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+.container {
+  position: relative;
+  width: 90%;
+  float: center;
+}
+.container:hover .overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  font-family: Georgia, serif;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 </style>
 </head>
-<body style="background-color:#0D0D0B;">
+<body style="background-color:#000;">
 <div class="bg">
   <br>
 
@@ -434,6 +467,10 @@ a:hover{
         <button id = "workexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Experience</span></button>
         <br>
         <button id = "aboutmebutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>About Me</span></button>
+        <br>
+        <button id = "contactmebutton"class="button" style="vertical-align:middle" ><span>Contact Me</span></button>
+
+
 </center>
   </div>
 
@@ -449,35 +486,87 @@ a:hover{
 </center>-->
 </div>
 <center><h2></h2></center>
-<center><div id="scrolldown">
+<center><div id="scrolldown" style="width:70%; margin-top:3%">
 
 
-  <div class="intro" style="margin-top:-4%; text-align:left; font-size:32px">My Work Samples</div>
+  <div class="intro" style="margin-top:-4%; text-align:center; background-image: url('wall.jpg');
+    background-position: center; background-size: cover;
+    background-repeat: no-repeat; font-size:32px">My Work Samples</div>
   <br>
-
-  <a href="#myModalminiproj" class="btn btn-lg btn-primary" data-toggle="modal"><img id="miniproj" src="mini.png" width="35%" height="255"></a>
-  <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="35%" height="255">
+  <div style="background-image: url('wall.jpg');
+    background-position: center; background-size: cover;
+    background-repeat: no-repeat; width:50%; height: 550px; float:left">
+  
+  <br>
+  <div class="container">
+ 
+  <a href="#myModalminiproj" data-toggle="modal"><img id="miniproj" src="mini.png" width="100%" height="235">
+    <div class="overlay">
+      <div class="text">Mini Data Visualization Project</div>
+   </div>
   </a>
-  <br>
-  <br>
-<a href="#myModalincarceration" class="btn btn-lg btn-primary" data-toggle="modal"><img id="myImg" src="incarceration.png" width="35%" height="255" class="sketches"></a>
-<img id="sketches" src="2.jpg" width="35%" height="255" class="sketches">
+  </div>
+  
+ <br> 
+<div class="container"> 
 
+    <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="100%" height="235">
+      <div class="overlay">
+        <div class="text">Chicago Aerial Images Project</div>
+      </div>
+    </a>
+ 
+</div>
+</div>
 
+ <div style="background-image: url('wall.jpg');
+    background-position: center; background-size: cover;
+    background-repeat: no-repeat; width:50%; height: 550px; float:right">
+  
+  <br>
+  <div class="container">
+
+  <a href="#myModalincarceration" class="btn btn-lg btn-primary" data-toggle="modal"><img id="myImg" src="incarceration.png" width="100%" height="235" class="sketches">
+    <div class="overlay">
+    <div class="text">United States Incarceration Project</div>
+  </div>
+  </a>
+</div>
+<br>
+  <div class="container">
+  <img id="sketches" src="2.jpg" width="100%" height="235" class="sketches">
+  <div class="overlay">
+    <div class="text">My Data Visualization sketches</div>
+  </div>
+  </img>
+  </div>
+  
+  </div></center>
 
 </div>
 </center>
 
-<center><h2></h2></center>
-<center><div id="scrollthrice">
-  <div class="intro" style="margin-top:2%; text-align:left; font-size:32px">Professional Experience</div>
+
+
+<center><div id="scrollthrice" style="width:70%; margin-top:10%">
+  <center><div class="intro" style="margin-top:65%; background-image: url('wall.jpg');
+    background-position: center; background-size: cover;
+    background-repeat: no-repeat; font-size:32px">Professional Experience</div></center>
   <br>
   <ul class="workex">
-    <li> Graduate Research Assistant (August 2016 - December 2016) : Biomedical Visualization in UIC
+    <li> Graduate Research Assistant (August 2016 - December 2016) : Biomedical Visualization in UIC.
+      <br>
+       <br>
+      <p style="font-size:22px; color:#888; text-align: justify;
+    text-justify: inter-word;">Worked as a Graduate Research Assistant in Biomedical Visualization Dept of UIC. We were responsible for developing an interactive dashboard that incorporates real time medical data of ICU patients. </p> 
 
     </li>
 <br>
     <li> Summer Research Assistant (May 2016 - July 2016) : Electronic Visualization Laboratory 
+      <br>
+       <br>
+      <p style="font-size:22px; color:#888; text-align: justify;
+    text-justify: inter-word;">As a Research Assistant, I designed a graphical interface that was supposed to help physicians during morning rounds. The application was built using D3, Javascript and SVG.</p>
     </li>
 
   </ul>
@@ -485,6 +574,24 @@ a:hover{
 </div>
 </center>
 
+<center><div id="scrollfour" style="width:70%; margin-top:10%">
+  <center><div class="intro" style="margin-top:5%; background-image: url('wall.jpg');
+    background-position: center; background-size: cover;
+    background-repeat: no-repeat; font-size:32px">Wanna be in touch?</div></center>
+  <br>
+  <ul class="workex">
+    <center>  <img src="email.png" style="width:100px;height:100px"> 
+      <p>Drop me an email at:
+     </p>
+      <a href="mailto:snehatuteja93@gmail.com" style="color:#c2c2c2; margin-top:-2%">snehatuteja93@gmail.com</a>
+
+   
+</center>
+
+  </ul>
+
+</div>
+</center>
 
 <div id="aboutmemodal" class="modal">
 
@@ -496,7 +603,7 @@ a:hover{
     
     <div class="modal-body">
       <h2>About Me</h2>
-      <p class= "big" style="color:#B1AFAD; width:60%; float:right; margin-top:-2%"><i>Hi, I am 23 years old, pursuing my Masters in Computer Science. I love designing and data visualization. I like clean and elegant designs. I always want to create unique and high quality designs.</i></p>
+      <p class= "big" style="color:#DBD7D5; width:60%; float:right; margin-top:-2%"><i>Hi, I am 23 years old, pursuing my Masters in Computer Science. I love designing and data visualization. I like clean and elegant designs. I always want to create unique and high quality designs.</i></p>
       
       <a href="RESUME.png" class="resume" target="_blank">Resume</a>
       <a href="https://www.linkedin.com/in/sneha-tuteja-5909bb108" class="linkedin" target="_blank">LinkedIn</a>
@@ -636,6 +743,18 @@ $("#workbutton").click(function() {
 $("#workexbutton").click(function() {
     $('html,body').animate({
         scrollTop: $("#scrollthrice").offset().top},
+        'slow');
+});
+
+$("#contactmebutton").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#scrollfour").offset().top},
+        'slow');
+});
+
+$("#homexbutton").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#top").offset().top},
         'slow');
 });
 var modal = document.getElementById('myModal');
