@@ -15,11 +15,10 @@ body {
 }
 
 .bg {
-    /* The image used */
+    margin-top: -2%;
     background-image: url('bg1.jpg');
     height: 100%; 
-
-    /* Center and scale the image nicely */
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,6 +26,7 @@ body {
 h1{
     font-family: "Times New Roman", Times, serif;
     color: white;
+    font-size: 18px;
 }
 
 .modal {
@@ -232,15 +232,18 @@ img {
 
 button {
   border: none;
-  background: #863518;
-  color: #f2f2f2;
+  background: transparent;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 3%;
+  color: #fff;
   padding: 13px;
-  width: 95%;
-  font-size: 15px;
+  width: 25%;
+  font-size: 25px;
   border-radius: 5px;
   position: relative;
   box-sizing: border-box;
   transition: all 500ms ease; 
+  cursor: pointer;
 }
 
 button:before {
@@ -252,7 +255,7 @@ button:before {
   height: 43px;
   background: rgba(255,255,255,0.3);
   border-radius: 5px;
-  transition: all 2s ease;
+  transition: all .7s ease;
 } 
 button:hover:before {
   width: 100%;
@@ -323,17 +326,20 @@ h2{
    font-family: "Times New Roman", Times, serif;
   color: #fff;
   font-size: 38px;
- margin-left: 55%;
   font-weight: inherit;
 }
 p.big {
     line-height: 130%;
+    text-align: justify;
+    color: #fff;
 }
 .workex{
   font-family: "Times New Roman", Times, serif;
-  font-size: 22px;
+  font-size: 20px;
   color: #fff;
   text-align: left;
+  margin-right: 25px;
+
 }
 /*a:hover{
   opacity: 0.6;
@@ -410,29 +416,44 @@ p.big {
 
 .overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 0;
+  left: 55%;
   right: 0;
-  background-color: #652711;
+  background-color: transparent;
   overflow: hidden;
   width: 0;
-  height: 100%;
-  transition: .5s ease;
+  height: 200px;
+  transition: .25s ease;
+}
+.overlay1 {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  left: 0;
+  background-color: transparent;
+  overflow: hidden;
+  width: 0;
+  height: 200px;
+  transition: .20s ease;
 }
 .container {
   position: relative;
   width: 90%;
-  float: center;
+  float: left;
 }
 .container:hover .overlay {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 200px;
 }
-
+.container:hover .overlay1 {
+  width: 50%;
+  height: 200px;
+  float: right;
+}
 .text {
   white-space: nowrap; 
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -442,19 +463,90 @@ p.big {
   -ms-transform: translate(-50%, -50%);
 }
 
+.first {
+    width: 50%;
+    height: 100%;
+    background-color: brown;
+    background-attachment: fixed;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0.6;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:brown; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+   
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:brown; left:100%; top:0px;}
+    25%  {background-color:#750f0f; left:0px; top:0px;}
+    50%  {background-color:#450a0a; left:0px; top:0px;}
+    75% {background-color:brown; left:0px; top:0px;}
+    100% {background-color:brown; left:0px; top:0px;}
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+
 </style>
 </head>
-<body style="background-color:#000;">
+<body style="background-color:black; background-image: url('bg1.jpg');background-position: center; background-size: cover;
+    background-repeat: no-repeat; background-attachment:fixed ">
 <div class="bg">
+  
+  <div class="first" id ="top">
+
+
+    <center>
+            
+      <h2><b>SNEHA TUTEJA</b></h2>
+      <p class= "big" style="width:90%; margin-top:-4%; font-size:18px;"><i><center><h1>UI and Data Visualization Engineer</h1></center></i></p>
+
+        <button id = "homexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Home</span></button> 
+        <br>
+        <button id = "workbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>My work</span></button>
+        <br>
+        <button id = "workexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Experience</span></button>
+        <br>
+        <button id = "contactmebutton"class="button" style="vertical-align:middle" ><span>Contact Me</span></button>
+        <br>
+        <br>
+        <br>
+        <img id="downarrow" src="arrow.png" style="width:45px;height:65px; cursor:pointer">
+
+
+
+</center>
+  </div>
   <br>
 
 
  
-<center><div class="intro" id ="top">
+<center>
+<!--
+  <div class="intro">
+
  SNEHA TUTEJA
  <p class = "intronote">a UI and Data Visualization engineer</p>
+ -->
 <a href="#" class="scrollToTop"><img src="arrow.png" class="imagetop"></a>
-<div id="panel">
+
+<!--<div id="panel">
     <div id="panelCaller">Menu</div>
     
     
@@ -485,107 +577,124 @@ p.big {
         <button id = "aboutmebutton"class="button" style="vertical-align:middle"><span>About Me</span></button>
 </center>-->
 </div>
-<center><h2></h2></center>
-<center><div id="scrolldown" style="width:75%; margin-top:1%">
 
 
-  <div class="intro" style="margin-top:4%; text-align:center; background-image: url('wall.jpg');
+<div id="scrolldown" style="width:50%; margin-top:0%; height:100%; margin-left:50%;" class="bg">
+
+<!--
+  <div class="intro" style="margin-top:4%; text-align:center; background-image: url('wall1.jpg');
     background-position: center; background-size: cover;
     background-repeat: no-repeat; font-size:32px">My Work Samples</div>
   <br>
-  <br>
-  <div style="background-image: url('wall.jpg');
-    background-position: center; background-size: cover;
-    background-repeat: no-repeat; width:50%; height: 480px; float:left">
+ --> 
   
-  <br>
+  <div style="background-color: #0E2258; opacity:0.7; width:100%; height: 105%; float:left">
+ <br>
   <div class="container">
  
-  <a href="#myModalminiproj" data-toggle="modal"><img id="miniproj" src="mini.png" width="100%" height="260">
+  <a href="#myModalminiproj" data-toggle="modal" style=" margin-left:20px;"><img id="miniproj" src="mini.png" width="50%" height="200" style:"float:left;">
     <div class="overlay">
       <div class="text">Mini Data Visualization Project</div>
    </div>
   </a>
+
   </div>
-  
- <br> 
+  <br>
+
 <div class="container"> 
 
-    <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal"><img id="aerialproj" src="aerial.png" width="100%" height="260">
-      <div class="overlay">
+
+    <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal" style=" margin-left:50%;"><img id="aerialproj" src="aerial.png" width="50%" height="200">
+      <div class="overlay1">
         <div class="text">Chicago Aerial Images Project</div>
       </div>
     </a>
  
 </div>
-</div>
+<!--</div>
 
- <div style="background-image: url('wall.jpg');
-    background-position: center; background-size: cover;
-    background-repeat: no-repeat; width:50%; height: 480px; float:right">
+ <div style="background-color: #0E2258; opacity:0.7;
+    width:25%; height: 75%; float:right">
   
   <br>
+-->
+<br>
   <div class="container">
-
-  <a href="#myModalincarceration" class="btn btn-lg btn-primary" data-toggle="modal"><img id="myImg" src="incarceration.png" width="100%" height="260" class="sketches">
+&nbsp;
+  &nbsp;
+  
+  <a href="#myModalincarceration" class="btn btn-lg btn-primary" data-toggle="modal"><img id="myImg" src="incarceration.png" width="50%" height="200" class="sketches">
     <div class="overlay">
     <div class="text">United States Incarceration Project</div>
   </div>
   </a>
 </div>
+<!--
 <br>
   <div class="container">
-  <img id="sketches" src="2.jpg" width="100%" height="260" class="sketches">
+  <img id="sketches" src="2.jpg" width="25%" height="260" class="sketches">
   <div class="overlay">
     <div class="text">My Data Visualization sketches</div>
   </div>
   </img>
   </div>
-  
-  </div></center>
+  -->
+  </div>
 
 </div>
+
 </center>
 
 
-
-<center><div id="scrollthrice" style="width:75%; margin-top:3%">
-  <center><div class="intro" style="margin-top:75%; background-image: url('wall.jpg');
+<center><div id="scrollthrice" style="width:50%; height: 105%; margin-right:50%; background-color:brown; opacity:0.7; margin-top:2%">
+ 
+ <!-- <center><div class="intro" style="margin-top:75%; background-image: url('wall1.jpg');
     background-position: center; background-size: cover;
     background-repeat: no-repeat; font-size:32px">Professional Experience</div></center>
+  -->
   <br>
+
+ <h2><i><b>Professional Experience</b></i></h2>
   <ul class="workex">
     <li> Graduate Research Assistant (August 2016 - December 2016) : Biomedical Visualization in UIC.
       <br>
        <br>
-      <p style="font-size:22px; color:#888; text-align: justify;
-    text-justify: inter-word;">Worked as a Graduate Research Assistant in Biomedical Visualization Dept of UIC. We were responsible for developing an interactive dashboard that incorporates real time medical data of ICU patients. </p> 
+      <p style="font-size:18px; color:#dbdbde; text-align: justify;
+    text-justify: inter-word; margin-right:25px;">Worked as a Graduate Research Assistant in Biomedical Visualization Dept of UIC. We were responsible for developing an interactive dashboard that incorporates real time medical data of ICU patients. </p> 
 
     </li>
 <br>
     <li> Summer Research Assistant (May 2016 - July 2016) : Electronic Visualization Laboratory 
       <br>
        <br>
-      <p style="font-size:22px; color:#888; text-align: justify;
-    text-justify: inter-word;">As a Research Assistant, I designed a graphical interface that was supposed to help physicians during morning rounds. The application was built using D3, Javascript and SVG.</p>
+      <p style="font-size:18px; color:#dbdbde; text-align: justify;
+    text-justify: inter-word; margin-right:25px;">As a Research Assistant, I designed a graphical interface that was supposed to help physicians during morning rounds. The application was built using D3, Javascript and SVG.</p>
     </li>
 
+
+
+  <center><a href="RESUME.png" class="button" target="_blank"><p>View my CV</p></a></center>
   </ul>
 
-</div>
-</center>
 
-<center><div id="scrollfour" style="width:75%; margin-top:10%">
-  <center><div class="intro" style="margin-top:5%; background-image: url('wall.jpg');
-    background-position: center; background-size: cover;
-    background-repeat: no-repeat; font-size:32px">Wanna get in touch?</div></center>
+</div>
+
+
+<div id="scrollfour" style="width:50%;height:100%; margin-left:50%; background-color:#0E2258; opacity:0.7">
+  <br>
+  <center><b><div class="workex" style="margin-top:5%; font-size:32px;"><center><i>Wanna get in touch?</i></center></div></b></center>
   <br>
   <ul class="workex">
     <center>  <img src="email.png" style="width:100px;height:100px"> 
       <p>Drop me an email at:
      </p>
       <a href="mailto:snehatuteja93@gmail.com" style="color:#c2c2c2; margin-top:-2%">snehatuteja93@gmail.com</a>
-
+      <p>Or add me on:
+     </p>
+     <a href="https://www.facebook.com/sneha.tuteja"><img src="insta.png" style="width:50px;height:50px"></a>&nbsp
+     <a href="https://www.instagram.com/snehatuteja16/"><img src="fb.png" style="width:50px;height:50px"></a>&nbsp
+     <a href="https://www.linkedin.com/in/snehatuteja/"><img src="linkedin.png" style="width:50px;height:50px"></a>
+     
    
 </center>
 
@@ -736,6 +845,12 @@ $(document).ready(function(){
 
 *
 $("#workbutton").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#scrolldown").offset().top},
+        'slow');
+});
+
+$("#downarrow").click(function() {
     $('html,body').animate({
         scrollTop: $("#scrolldown").offset().top},
         'slow');
