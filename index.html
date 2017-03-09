@@ -442,7 +442,7 @@ p.big {
   position: relative;
   width: 90%;
   float: left;
-  height: 32%;
+  height: 30%;
 }
 .container:hover .overlay {
   width: 50%;
@@ -502,9 +502,7 @@ a{
   text-decoration: none;
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
-  border: solid black 1px;
-  border-radius: 5px;
-  font-weight: bold;
+ font-weight: bold;
 
 }
 a:hover{
@@ -512,7 +510,305 @@ a:hover{
  font-weight: bold;
 
 }
-
+.demo-4 {
+  width: 180px;
+  background-color: transparent;
+  cursor: pointer;
+  border-color: #bdc3c7;
+}
+ 
+.demo-4:hover {
+  border-color: #062742;
+}
+ 
+.demo-4 span:nth-child(1) {
+  color: #FCFCFC;
+}
+ 
+.demo-4 span:nth-child(2) {
+  color: #062742;
+}
+ 
+.demo-4 span {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+ 
+.demo-4 {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  border-style: none;
+  height: 65px;
+  display: inline-block;
+}
+ 
+.demo-4 span {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+}
+.demo-4>span>span:nth-child(3), .demo-4:before, .demo-4:after, .demo-4>:first-child, .demo-4>:first-child:before, .demo-4>:first-child:after {
+  border-color: inherit;
+  display: block;
+  -moz-transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+ 
+.demo-4:before, .demo-4:after, .demo-4>:first-child:before, .demo-4>:first-child:after {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+}
+ 
+.demo-4>span>span:nth-child(3), .demo-4:before, .demo-4:after, .demo-4>:first-child:before, .demo-4>:first-child:after {
+  border-width: 3px;
+}
+.demo-4>span>span:nth-child(3) {
+  border-radius: 3px;
+}
+.demo-4:before {
+  border-radius: 3px 0 0 3px;
+}
+.demo-4:after {
+  border-radius: 0 3px 3px 0;
+}
+.demo-4>:first-child:before {
+  border-radius: 3px 3px 0 0;
+}
+.demo-4>:first-child:after {
+  border-radius: 0 0 3px 3px;
+}
+ 
+.demo-4>:first-child {
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+.demo-4>span span {
+  width: inherit;
+  text-align: center;
+  -moz-transition: opacity 0.6s ease, top 0.5s ease;
+  -webkit-transition: opacity 0.6s ease, top 0.5s ease;
+  transition: opacity 0.6s ease, top 0.5s ease;
+}
+.demo-4>span>span:nth-child(1) {
+  opacity: 1;
+  top: 18px;
+}
+.demo-4>span>span:nth-child(2) {
+  top: 37px;
+  opacity: 0;
+}
+.demo-4:hover>span>span:nth-child(1) {
+  opacity: 0;
+  top: 2px;
+}
+.demo-4:hover>span>span:nth-child(2){
+  opacity: 1;
+  top: 18px;
+}
+ 
+.demo-4>span>span:nth-child(3) {
+  top: 28%;
+  height: 44%;
+  width: inherit;
+  border-style: none solid none solid;
+}
+ 
+.demo-4:before, .demo-4:after {
+  top: 0;
+  width: 0;
+  height: inherit;
+  border-style: solid none solid none;
+}
+ 
+.demo-4>:first-child:before, .demo-4>:first-child:after {
+  left: 0;
+  height: 0;
+  width: inherit;
+  border-style: none solid none solid;
+}
+ 
+.demo-4:before {
+  -webkit-animation-name: left-center;
+  animation-name: left-center;
+}
+ 
+.demo-4:after {
+  -webkit-animation-name: right-center;
+  animation-name: right-center;
+}
+ 
+.demo-4>:first-child:before {
+  -webkit-animation-name: center-top;
+  animation-name: center-top;
+}
+ 
+.demo-4>:first-child:after {
+  -webkit-animation-name: center-bottom;
+  animation-name: center-bottom;
+}
+ 
+.demo-4:hover:before {
+  -webkit-animation-name: center-left;
+  animation-name: center-left;
+}
+ 
+.demo-4:hover:after {
+  -webkit-animation-name: center-right;
+  animation-name: center-right;
+}
+ 
+.demo-4:hover>:first-child:before {
+  -webkit-animation-name: top-center;
+  animation-name: top-center;
+}
+ 
+.demo-4:hover>:first-child:after {
+  -webkit-animation-name: bottom-center;
+  animation-name: bottom-center;
+}
+@-webkit-keyframes center-left {
+    0%   {left: 40%; width: 8%; opacity: 0.2;}
+    25%  {left: 25%; width: 15%;}
+    50%  {left: 0%; width: 30%;}
+    80%  {left: 0%; width: 0%;}
+    100% {left: 0%; width: 0%; opacity: 1;}
+}
+ 
+@-webkit-keyframes left-center {
+    0%   {left: 0%; width: 0%; opacity: 1;}
+    20%  {left: 0%; width: 0%;}
+    50%  {left: 0%; width: 30%;}
+    55%  {left: 40%; width: 11%;}
+    100% {left: 43%; width: 8%; opacity: 0.2;}
+}
+ 
+@-webkit-keyframes center-right {
+    0%   {left: 52%; width: 8%; opacity: 0.2;}
+    25%  {left: 60%; width: 15%;}
+    50%  {left: 70%; width: 30%;}
+    80%  {left: 100%; width: 0%;}
+    100% {left: 100%; width: 0%; opacity: 1;}
+}
+ 
+@-webkit-keyframes right-center {
+    0%   {left: 100%; width: 0%; opacity: 1;}
+    20%  {left: 100%; width: 0%;}
+    50%  {left: 70%; width: 30%;}
+    55%  {left: 49%; width: 11%;}
+    100% {left: 49%; width: 8%; opacity: 0.2;}
+}
+ 
+@-webkit-keyframes top-center {
+    0%   {top: 0%; height: 0%; opacity: 0.2;}
+    50%  {top: 0%; height: 0%;}
+    60%  {top: 0%; height: 20%;}
+    80%  {top: 0%; height: 50%;}
+    90%  {top: 25%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+ 
+@-webkit-keyframes center-top {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 25%; height: 25%;}
+    20%  {top: 0%; height: 50%;}
+    40%  {top: 0%; height: 20%;}
+    50%  {top: 0%; height: 0%;}
+    100% {top: 0%; height: 0%; opacity: 0.2;}
+}
+ 
+@-webkit-keyframes bottom-center {
+    0%   {top: 100%; height: 0%; opacity: 0.2;}
+    50%  {top: 100%; height: 0%;}
+    60%  {top: 80%; height: 20%;}
+    80%  {top: 50%; height: 50%;}
+    90%  {top: 50%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+ 
+@-webkit-keyframes center-bottom {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 50%; height: 25%;}
+    20%  {top: 50%; height: 50%;}
+    40%  {top: 80%; height: 20%;}
+    50%  {top: 100%; height: 0%;}
+    100% {top: 100%; height: 0%; opacity: 0.2;}
+}
+ 
+@keyframes center-left {
+    0%   {left: 40%; width: 8%; opacity: 0.2;}
+    25%  {left: 25%; width: 15%;}
+    50%  {left: 0%; width: 30%;}
+    80%  {left: 0%; width: 0%;}
+    100% {left: 0%; width: 0%; opacity: 1;}
+}
+ 
+@keyframes left-center {
+    0%   {left: 0%; width: 0%; opacity: 1;}
+    20%  {left: 0%; width: 0%;}
+    50%  {left: 0%; width: 30%;}
+    55%  {left: 40%; width: 11%;}
+    100% {left: 43%; width: 8%; opacity: 0.2;}
+}
+ 
+@keyframes center-right {
+    0%   {left: 52%; width: 8%; opacity: 0.2;}
+    25%  {left: 60%; width: 15%;}
+    50%  {left: 70%; width: 30%;}
+    80%  {left: 100%; width: 0%;}
+    100% {left: 100%; width: 0%; opacity: 1;}
+}
+ 
+@keyframes right-center {
+    0%   {left: 100%; width: 0%; opacity: 1;}
+    20%  {left: 100%; width: 0%;}
+    50%  {left: 70%; width: 30%;}
+    55%  {left: 49%; width: 11%;}
+    100% {left: 49%; width: 8%; opacity: 0.2;}
+}
+ 
+@keyframes top-center {
+    0%   {top: 0%; height: 0%; opacity: 0.2;}
+    50%  {top: 0%; height: 0%;}
+    60%  {top: 0%; height: 20%;}
+    80%  {top: 0%; height: 50%;}
+    90%  {top: 25%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+ 
+@keyframes center-top {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 25%; height: 25%;}
+    20%  {top: 0%; height: 50%;}
+    40%  {top: 0%; height: 20%;}
+    50%  {top: 0%; height: 0%;}
+    100% {top: 0%; height: 0%; opacity: 0.2;}
+}
+ 
+@keyframes bottom-center {
+    0%   {top: 100%; height: 0%; opacity: 0.2;}
+    50%  {top: 100%; height: 0%;}
+    60%  {top: 80%; height: 20%;}
+    80%  {top: 50%; height: 50%;}
+    90%  {top: 50%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+ 
+@keyframes center-bottom {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 50%; height: 25%;}
+    20%  {top: 50%; height: 50%;}
+    40%  {top: 80%; height: 20%;}
+    50%  {top: 100%; height: 0%;}
+    100% {top: 100%; height: 0%; opacity: 0.2;}
+}
 </style>
 </head>
 <body style="background-color:black; background-image: url('bg1.jpg');background-position: center; background-size: cover;
@@ -553,59 +849,13 @@ a:hover{
 
  
 <center>
-
-
-<!--
-  <div class="intro">
-
- SNEHA TUTEJA
- <p class = "intronote">a UI and Data Visualization engineer</p>
- -->
-
-
-<!--<div id="panel">
-    <div id="panelCaller">Menu</div>
-    
-    
-    <center>
-        
-        <button id = "homexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Home</span></button> 
-        <br>
-        <button id = "workbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>My work</span></button>
-        <br>
-        <button id = "workexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Experience</span></button>
-        <br>
-        <button id = "aboutmebutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>About Me</span></button>
-        <br>
-        <button id = "contactmebutton"class="button" style="vertical-align:middle" ><span>Contact Me</span></button>
-
-
-</center>
-  </div>
-
-
-</div> </center>
-
-<br>
-<br>
-
-<!--<center><button id = "workbutton"class="button" style="vertical-align:middle"><span>My work</span></button>
-        <button id = "workexbutton"class="button" style="vertical-align:middle"><span>Experience</span></button>
-        <button id = "aboutmebutton"class="button" style="vertical-align:middle"><span>About Me</span></button>
-</center>-->
 </div>
 
 
 <div id="scrolldown" style="width:50%; margin-top:0%; height:100%; margin-left:50%;" class="bg">
 
-<!--
-  <div class="intro" style="margin-top:4%; text-align:center; background-image: url('wall1.jpg');
-    background-position: center; background-size: cover;
-    background-repeat: no-repeat; font-size:32px">My Work Samples</div>
-  <br>
- --> 
   
-  <div style="background-color: #0E2258; opacity:0.7; width:100%; height: 105%; float:left">
+  <div style="background-color: #0E2258; opacity:0.7; width:100%; height: 100%; float:left">
  <br>
   <div class="container">
  
@@ -628,13 +878,6 @@ a:hover{
     </a>
  
 </div>
-<!--</div>
-
- <div style="background-color: #0E2258; opacity:0.7;
-    width:25%; height: 75%; float:right">
-  
-  <br>
--->
 <br>
   <div class="container">
 &nbsp;
@@ -645,17 +888,13 @@ a:hover{
     <div class="text">United States Incarceration Project</div>
   </div>
   </a>
+
 </div>
-<!--
+<div style="margin-top:80%; margin-right:25%; margin-left:30%">
 <br>
-  <div class="container">
-  <img id="sketches" src="2.jpg" width="25%" height="260" class="sketches">
-  <div class="overlay">
-    <div class="text">My Data Visualization sketches</div>
-  </div>
-  </img>
-  </div>
-  -->
+ <a href="#top">Home |</a><a href="#scrollthrice"> Experience |</a><a href="#scrollfour"> Contact </a>
+ </div>
+ 
   </div>
 
 </div>
@@ -663,7 +902,7 @@ a:hover{
 </center>
 
 
-<center><div id="scrollthrice" style="width:50%; height: 105%; margin-right:50%; background-color:brown; opacity:0.7; margin-top:2%">
+<center><div id="scrollthrice" style="width:50%; height: 105%; margin-right:50%; background-color:brown; opacity:0.7;">
  
  <!-- <center><div class="intro" style="margin-top:75%; background-image: url('wall1.jpg');
     background-position: center; background-size: cover;
@@ -688,10 +927,18 @@ a:hover{
     text-justify: inter-word; margin-right:25px;">As a Research Assistant, I designed a graphical interface that was supposed to help physicians during morning rounds. The application was built using D3, Javascript and SVG.</p>
     </li>
 <br>
-<br>
 
 
-  <center><a href="RESUME.png" class="button" target="_blank"><p>View my CV</p></a></center>
+      <center><a href="RESUME.png" class="demo-4">
+      <span>
+        <span>View my CV</span>
+        <span>Click</span>
+        <span></span>
+      </span>
+    </a>  </center>
+
+ <br>
+ <center><a href="#top">Home |</a><a href="#scrolldown"> Work |</a><a href="#scrollfour"> Contact </a></center>
   </ul>
 
 
@@ -715,6 +962,9 @@ a:hover{
      
    
 </center>
+
+  <br>
+ <center><a href="#top">Home |</a><a href="#scrolldown"> Work |</a><a href="#scrollthrice"> Experience </a></center>
 
   </ul>
 
