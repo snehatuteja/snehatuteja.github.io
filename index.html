@@ -329,6 +329,13 @@ h2{
   font-size: 38px;
   font-weight: inherit;
 }
+.workheader{
+   font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 32px;
+  
+
+}
 p.big {
     line-height: 130%;
     text-align: justify;
@@ -441,7 +448,7 @@ p.big {
   position: relative;
   width: 90%;
   float: left;
-  height: 30%;
+  height: 26%;
 }
 .container:hover .overlay {
   width: 50%;
@@ -839,49 +846,65 @@ a:hover{
 </div>
 
 
-<div id="scrolldown" style="width:50%; margin-top:0%; height:100%; margin-left:50%;" class="bg">
+<div id="scrolldown" style="width:50%; margin-top:0%; height:110%; margin-left:50%;" class="bg">
 
-  
-  <div style="background-color: #0E2258; opacity:0.7; width:100%; height: 100%; float:left">
- <br>
+
+  <div style="background-color: #0E2258; opacity:0.7; width:100%; height: 100%; float:left; ">
+    <br>
+   <center><div class = "workheader"><i><b><font size="6">My Work Samples</font></b></i></div></center>
+ <!--
+  -->
+    <br>
   <div class="container">
  
-  <a href="#myModalminiproj" data-toggle="modal" style=" margin-left:20px;"><img id="miniproj" src="mini.png" width="50%" height="100%" style:"float:left;">
+  <a href="#myModalminiproj" data-toggle="modal" style=" margin-left:20px;"><img id="miniproj" src="mini.png" width="45%" height="100%" 
+    style:"float:left; margin-top:10px">
     <div class="overlay">
       <div class="text">Mini Data Visualization Project</div>
    </div>
   </a>
 
   </div>
-  <br>
+ 
 
 <div class="container"> 
 
 
-    <a href="#myModalaerial" class="btn btn-lg btn-primary" data-toggle="modal" style=" margin-left:50%;"><img id="aerialproj" src="aerial.png" width="50%" height="100%">
+    <a href="#myModalaerial" data-toggle="modal" style=" margin-left:50%;"><img id="aerialproj" src="aerial.png" width="45%" 
+      height="100%" style="margin-top:-20px">
       <div class="overlay1">
         <div class="text">Chicago Aerial Images Project</div>
       </div>
     </a>
  
 </div>
-<br>
+
   <div class="container">
 &nbsp;
   &nbsp;
+
   
-  <a href="#myModalincarceration" class="btn btn-lg btn-primary" data-toggle="modal"><img id="myImg" src="incarceration.png" width="50%" height="100%" class="sketches">
+  <a href="#myModalincarceration" data-toggle="modal"><img id="myImg" src="incarceration.png" width="45%" height="100%" style="margin-top:-40px" class="sketches">
     <div class="overlay">
     <div class="text">United States Incarceration Project</div>
   </div>
   </a>
 
 </div>
-<div style="margin-top:75%; margin-right:20%; margin-left:35%">
+
+  <center><a href="#sketchmodal" data-toggle="modal" class="demo-4" style="margin-top:-25px">
+      <span>
+        <span><font size="4.5">View Prototypes</font></span>
+        <span>Click</span>
+        <span></span>
+      </span>
+    </a>  </center>
+
+<center><div>
  <a href="#top">Home |</a><a href="#scrollthrice"> Experience |</a><a href="#scrollfour"> Contact </a>
- </div>
- 
-  </div>
+</div></center>
+  
+</div>
 
 </div>
 
@@ -957,71 +980,23 @@ a:hover{
 </div>
 </center>
 
-<div id="aboutmemodal" class="modal">
-
-  <!-- Modal content -->
-  <div class="Aboutmepopup">
-    
-      <span class="closeaboutme">&times;</span>
-      
-    
-    <div class="modal-body">
-      <h2>About Me</h2>
-      <p class= "big" style="color:#DBD7D5; width:60%; float:right; margin-top:-2%"><i>Hi, I am 23 years old, pursuing my Masters in Computer Science. I love designing and data visualization. I like clean and elegant designs. I always want to create unique and high quality designs.</i></p>
-      
-      <a href="RESUME.png" class="resume" target="_blank">Resume</a>
-      <a href="https://www.linkedin.com/in/sneha-tuteja-5909bb108" class="linkedin" target="_blank">LinkedIn</a>
-  
-    </div>
-    
-  </div>
-
-</div>
 
 <div id="sketchmodal" class="modal">
 
   <!-- Modal content -->
 <div class="modal-content">
     <div class="modal-header">
-      <span class="closesketch">&times;</span>
-      <center><h3>My sketches</h3></center>
+      
+      <center><h3>Paper prototypes</h3></center>
     </div>
 
-<div class="slideshow-container">
-<br>
-<div class="mySlides fade">
-  <div class="numbertext">1 / 4</div>
-  <center><img src="1.jpg" height="300" width="300"></center>
-  
-</div>
+<center><div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="1.jpg" style="width:80%; height:400px">
+  <img class="mySlides" src="2.jpg" style="width:100%; height:400px">
+  <img class="mySlides" src="3.jpeg" style="width:100%; height:400px">
+  <img class="mySlides" src="4.jpg" style="width:75%; height:400px">
+</div></center>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 4</div>
-  <center><img src="2.jpg" height="300" width="350"></center>
-  
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 4</div>
-  <center><img src="3.jpeg" height="300" width="=250"></center>
- 
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 4</div>
-  <center><img src="4.jpg" height="300" width="=250"></center>
- 
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
 
 </div>
 
@@ -1078,6 +1053,21 @@ a:hover{
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 
 function closeNav() {
     document.getElementById("menubar").style.width = 0;
@@ -1177,25 +1167,7 @@ window.onclick = function(event) {
         modalaboutme.style.display = "none";
     }
 }
-var slideIndex = 0;
-showSlides();
 
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
 $(document).ready(function(){
   
   //Check to see if the window is top if not then display button
@@ -1214,6 +1186,7 @@ $(document).ready(function(){
   });
   
 });
+
 
 </script>
 
