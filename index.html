@@ -13,6 +13,9 @@ body {
     box-shadow: inset 0 0 490px white;
   /*  background: url('image.jpg'); */
 }
+*:focus {
+    outline: none;
+}
 
 .bg {
     
@@ -21,11 +24,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-h1{
-    font-family: "Times New Roman", Times, serif;
-    color: white;
-    font-size: 18px;
 }
 
 .modal {
@@ -71,12 +69,11 @@ h1{
 /* The Close Button */
 .close {
     color: white;
-    float: right;
     width: 25px;
+    float: right;
     background-color: #423D3D;
-    font-size: 28px;
+    font-size: 12px;
     font-weight: bold;
-    margin-right: 28px;
     margin-top: 10px;
 }
 .closesketch {
@@ -234,9 +231,11 @@ button {
   background: transparent;
   font-family: "Times New Roman", Times, serif;
   margin-top: 3%;
+  text-align: right;
   color: #fff;
   padding: 13px;
   width: 25%;
+  margin-left: 10em;
   font-size: 25px;
   border-radius: 5px;
   position: relative;
@@ -251,7 +250,7 @@ button:before {
   top: 0px;
   left: 0px;
   width: 0px;
-  height: 43px;
+  height: 60px;
   background: rgba(255,255,255,0.3);
   border-radius: 5px;
   transition: all .7s ease;
@@ -323,18 +322,32 @@ button:hover:before {
     animation-duration: 0.5s;
     animation-delay:5s;
 }
+h1{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 3em;
+	margin-top: 0.2em;
+	margin-left: 0.5em;
+	color: #e1e1e1;
+	text-align: left;
+}
 h2{
    font-family: "Times New Roman", Times, serif;
   color: #fff;
-  font-size: 38px;
+  font-size: 1.3em;
+  font-style: italic;
   font-weight: inherit;
+  text-align: left;
+  margin-top: -2em !important;
+  margin-left: 1em;
 }
 .workheader{
    font-family: "Times New Roman", Times, serif;
   color: #fff;
   font-size: 32px;
-  
-
+  background-color: #3d3c3c;
+  opacity: 0.8;
+  padding: 0.2em;
+  border-radius: 10px;
 }
 p.big {
     line-height: 130%;
@@ -425,8 +438,7 @@ p.big {
 .overlay {
   position: absolute;
   top: 0;
-  left: 55%;
-  right: 0;
+  left: 45%;
   background-color: transparent;
   overflow: hidden;
   width: 0;
@@ -436,8 +448,7 @@ p.big {
 .overlay1 {
   position: absolute;
   top: 0;
-  right: 50%;
-  left: 0;
+  right: 55%;
   background-color: transparent;
   overflow: hidden;
   width: 0;
@@ -475,33 +486,27 @@ p.big {
 .first {
     width: 50%;
     height: 100%;
-    background-color: brown;
+    background-color: transparent;
     background-attachment: fixed;
-    position: relative;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s;
-    animation-name: example;
-    animation-duration: 4s;
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+    position: fixed;
     opacity: 0.6;
 
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
-    0%   {background-color:brown; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
+    0%   {background-color:transparent; left:0px; top:0px;}
+    25%  {background-color:transparent; left:200px; top:0px;}
    
 }
 
 /* Standard syntax */
 @keyframes example {
-    0%   {background-color:brown; left:100%; top:0px;}
-    25%  {background-color:#750f0f; left:0px; top:0px;}
-    50%  {background-color:#450a0a; left:0px; top:0px;}
-    75% {background-color:brown; left:0px; top:0px;}
-    100% {background-color:brown; left:0px; top:0px;}
+    0%   {background-color:transparent; left:100%; top:0px;}
+    25%  {background-color:transparent; left:0px; top:0px;}
+    50%  {background-color:transparent; left:0px; top:0px;}
+    75% {background-color:transparent; left:0px; top:0px;}
+    100% {background-color:transparent; left:0px; top:0px;}
 }
 a{
   color: #908B8B;
@@ -800,16 +805,28 @@ a:hover{
     50%  {top: 100%; height: 0%;} 
     100% {top: 100%; height: 0%; opacity: 0.2;}
 }
+.back{background: black; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, black , #4A4A4A); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, black, #4A4A4A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, black, #4A4A4A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, black , #4A4A4A); /* Standard syntax (must be last) */
+}
+
 </style>
 
 <link rel="shortcut icon" href="img1.png" type="image/x-icon">
 </head>
-<body style="background-color:black; background-image: url('bg2.jpg');background-position: center; background-size: cover;
+<body style="background-color:black; background-image: url('wallpaper-3.png');background-position: center; background-size: cover;
     background-repeat: no-repeat; background-attachment:fixed ">
 
 
-      <a href="#" class="scrollToTop"><img src="arrow.png" class="imagetop"></a>
+    
 <div class="bg">
+<div id = "headline" style = "margin-left: 50%; float: right; width: 50%; font-size: 2.2em; font-style: italic; font-family: Times New Roman;">
+<center><p style = "margin-top: 40%; color: grey !important; ">Life is short.</p>
+<p style = "color: grey !important; ">Smile while you still have teeth!!</p></center>
+
+</div>
   
   <div class="first" id ="top">
 
@@ -817,50 +834,66 @@ a:hover{
     <center>
             <br>
             
-      <h2><b>SNEHA TUTEJA</b></h2>
+      <h1><b>SNEHA TUTEJA</b></h1>
       <br>
-      <p class= "big" style="width:90%; margin-top:-4%; font-size:18px;"><i><center><h1>UI and Data Visualization Engineer</h1></center></i></p>
+      <h2>Web Designer and Developer</h2>
 
-        <button id = "homexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Home</span></button> 
+        <button id = "homexbutton" class="button" onclick="closeNav()"><span>Home</span></button> 
         <br>
-        <button id = "workbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>My work</span></button>
+        <button id = "workbutton" class="button" onclick="closeNav()"><span>My work</span></button>
         <br>
-        <button id = "workexbutton"class="button" style="vertical-align:middle" onclick="closeNav()"><span>Experience</span></button>
+        <button id = "workexbutton" class="button" onclick="closeNav()"><span>Experience</span></button>
         <br>
-        <button id = "contactmebutton"class="button" style="vertical-align:middle" ><span>Contact Me</span></button>
-        <br>
-        <br>
-        <br>
-        <br>
-        <center><img id="downarrow" src="arrow.png" style="width:45px;height:65px; cursor:pointer"></center>
-
-        
-
+        <button id = "contactmebutton" class="button" ><span>Contact Me</span></button>
+       
 
 
 </center>
+
   </div>
   <br>
 
-
- 
-<center>
 </div>
 
 
-<div id="scrolldown" style="width:50%; margin-top:0%; height:110%; margin-left:50%;" class="bg">
+
+<div id="scrolldown" style="width:45%; margin-top:0%; height:110%; margin-left:50%; background: -webkit-linear-gradient(left, black , #4A4A4A); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, black, #4A4A4A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, black, #4A4A4A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, black , #4A4A4A);">
 
 
-  <div style="background-color: #0E2258; opacity:0.7; width:100%; height: 100%; float:left; ">
+  <div style="background-color: transparent; opacity:0.7; width:100%; height: 100%; float:right; ">
     <br>
    <center><div class = "workheader"><i><b><font size="6">My Work Samples</font></b></i></div></center>
  <!--
   -->
     <br>
+  <div class="container"> 
+
+
+    <a href="#myModalaerial" data-toggle="modal" style="margin-top: 1em; "><img id="aerialproj" src="aerial.png" width="45%" 
+      height="100%">
+      <div class="overlay">
+        <div class="text">Chicago Aerial Images Project</div>
+      </div>
+    </a>
+ 
+</div>
+<div class="container">
+
+  <a href="#myModalincarceration" data-toggle="modal" style="margin-top: 1em; margin-left:50%;"><img id="myImg" src="incarceration.png" width="45%" height="100%">
+    <div class="overlay1">
+    <div class="text">US Incarceration Project</div>
+  </div>
+  </a>
+
+</div>
+
   <div class="container">
  
-  <a href="#myModalminiproj" data-toggle="modal" style=" margin-left:20px;"><img id="miniproj" src="mini.png" width="45%" height="100%" 
-    style:"float:left; margin-top:10px">
+  <a href="#myModalminiproj" data-toggle="modal" ><img id="miniproj" src="mini.png" width="45%" height="100%" 
+    margin-top:10px">
     <div class="overlay">
       <div class="text">Mini Data Visualization Project</div>
    </div>
@@ -869,42 +902,17 @@ a:hover{
   </div>
  
 
-<div class="container"> 
 
-
-    <a href="#myModalaerial" data-toggle="modal" style=" margin-left:50%;"><img id="aerialproj" src="aerial.png" width="45%" 
-      height="100%" style="margin-top:-20px">
-      <div class="overlay1">
-        <div class="text">Chicago Aerial Images Project</div>
-      </div>
-    </a>
- 
-</div>
-
-  <div class="container">
-&nbsp;
-  &nbsp;
 
   
-  <a href="#myModalincarceration" data-toggle="modal"><img id="myImg" src="incarceration.png" width="45%" height="100%" style="margin-top:-40px" class="sketches">
-    <div class="overlay">
-    <div class="text">United States Incarceration Project</div>
-  </div>
-  </a>
 
-</div>
-
-  <center><a href="#sketchmodal" data-toggle="modal" class="demo-4" style="margin-top:-25px">
+  <center><a href="#sketchmodal" data-toggle="modal" class="demo-4">
       <span>
         <span><font size="4.5">View Prototypes</font></span>
         <span>Click</span>
         <span></span>
       </span>
     </a>  </center>
-
-<center><div>
- <a href="#top">Home |</a><a href="#scrollthrice"> Experience |</a><a href="#scrollfour"> Contact </a>
-</div></center>
   
 </div>
 
@@ -913,17 +921,25 @@ a:hover{
 </center>
 
 
-<center><div id="scrollthrice" style="width:50%; height: 105%; margin-right:50%; background-color:brown; opacity:0.7;">
- 
- <!-- <center><div class="intro" style="margin-top:75%; background-image: url('wall1.jpg');
-    background-position: center; background-size: cover;
-    background-repeat: no-repeat; font-size:32px">Professional Experience</div></center>
-  -->
-  <br>
+<center><div id="scrollthrice" style="width:50%; height: 105%; margin-left:40%; opacity:0.7; background: -webkit-linear-gradient(left, black , #4A4A4A); /* For Safari 5.1 to 6.0 */margin-top: 2em;
+    background: -o-linear-gradient(right, black, #4A4A4A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, black, #4A4A4A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, black , #4A4A4A);">
 
- <h2><i><b>Professional Experience</b></i></h2>
+ <p class = "workheader"><i>Professional Experience</i></p>
   <ul class="workex">
-    <li> Curently working as a Web Developer Intern (July 2017- Present) : 
+
+  <li> Working as a Web Designer and Developer (July 2017- Present) : 
+      <br/>Le Panier Francais
+      <br>
+       <br>
+      <p style="font-size:18px; color:#dbdbde; text-align: justify;
+    text-justify: inter-word; margin-right:25px;">Working on designing and developing the new web application for the company. We are using Opencart (Content Managment System)
+    with Journal theme on top of it and customized CSS and Javascript.
+    </p> 
+
+    </li>
+    <li> Working as a Web Developer Intern (July 2017- Present) : 
       <br/>Dormstall
       <br>
        <br>
@@ -968,9 +984,12 @@ a:hover{
 </div>
 
 
-<div id="scrollfour" style="width:50%;height:100%; margin-left:50%; background-color:#0E2258; opacity:0.7">
+<div id="scrollfour" style="width:50%;height:100%; opacity:0.7; margin-left: 40%; background: -webkit-linear-gradient(left, black , #4A4A4A); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, black, #4A4A4A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, black, #4A4A4A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, black , #4A4A4A); margin-top:2em;">
   <br>
-  <center><b><div class="workex" style="margin-top:5%; font-size:32px;"><center><i>Wanna get in touch?</i></center></div></b></center>
+  <center><b><div class = "workheader"><center><i>Wanna get in touch?</i></center></div></b></center>
   <br>
   <ul class="workex">
     <center>  <img src="email.png" style="width:100px;height:100px"> 
@@ -987,7 +1006,6 @@ a:hover{
 </center>
 
   <br>
- <center><a href="#top">Home |</a><a href="#scrolldown"> Work |</a><a href="#scrollthrice"> Experience </a></center>
 
   </ul>
 
@@ -1020,7 +1038,7 @@ a:hover{
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <button type="button" class="close" data-dismiss="modal">X</button>
                     <center><h4 class="modal-title">YouTube Video</h4></center>
                 </div>
                 <div class="modal-body">
@@ -1037,7 +1055,7 @@ a:hover{
             <div class="modal-content">
                 <div class="modal-header">
                    
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <button type="button" class="close" data-dismiss="modal">X</button>
                     <center><h4 class="modal-title">YouTube Video</h4></center>
                 </div>
                 <div class="modal-body">
@@ -1052,7 +1070,7 @@ a:hover{
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <button type="button" class="close" data-dismiss="modal">X</button>
                     <center><h4 class="modal-title">YouTube Video</h4></center>
                 </div>
                 <div class="modal-body">
@@ -1128,7 +1146,7 @@ $("#contactmebutton").click(function() {
 
 $("#homexbutton").click(function() {
     $('html,body').animate({
-        scrollTop: $("#top").offset().top},
+        scrollTop: $("#headline").offset().top},
         'slow');
 });
 var modal = document.getElementById('myModal');
