@@ -13,6 +13,9 @@ body {
     box-shadow: inset 0 0 490px white;
   /*  background: url('image.jpg'); */
 }
+p, li, h4, h3{
+	font-family: 'Arial Narrow'
+}
 *:focus {
     outline: none;
 }
@@ -46,6 +49,7 @@ body {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
+    text-align: center;
     border: 1px solid #888;
     width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -75,16 +79,9 @@ body {
     font-size: 12px;
     font-weight: bold;
     margin-top: 10px;
+    margin-right: 10px;
 }
 .closesketch {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    margin-right: 15px;
-    margin-top: 10px;
-}
-.closeaboutme {
     color: white;
     float: right;
     font-size: 28px;
@@ -106,15 +103,6 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-
-.closeaboutme:hover,
-.closeaboutme:focus {
-    color: #938B8B;
-    text-decoration: none;
-    cursor: pointer;
-   
-}
-
 .modal-header {
     padding: 1px 1px;
     background-color: #423D3D;
@@ -122,6 +110,8 @@ body {
     font-family: "Times New Roman", Times, serif;
     font-weight: inherit;
     font-size: 22px;
+    text-align: left;
+    padding-left: 10px;
 }
 
 .modal-body {padding: 2px 16px;}
@@ -259,12 +249,6 @@ button:hover:before {
   width: 100%;
 }
 
-.aboutme{
-   font-family: "Times New Roman", Times, serif;
-   font-size: 20px;
-
-}
-
 .linkedin{
   background-color: #863518;
     width: 40%;
@@ -302,25 +286,6 @@ button:hover:before {
 
 .resume:hover{
   background-color: #9E6C35;
-}
-.Aboutmepopup{
-    background-image: url('bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 55%;
-    height: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-delay: 5s;
-    animation-name: animatetop;
-    animation-duration: 0.5s;
-    animation-delay:5s;
 }
 h1{
 	font-family: "Times New Roman", Times, serif;
@@ -838,13 +803,13 @@ a:hover{
       <br>
       <h2>Web Designer and Developer</h2>
 
-        <button id = "homexbutton" class="button" onclick="closeNav()"><span>Home</span></button> 
+        <button id = "homexbutton" class="button" onclick="closeNav()"><span style = "font-family:Arial Narrow">Home</span></button> 
         <br>
-        <button id = "workbutton" class="button" onclick="closeNav()"><span>My work</span></button>
+        <button id = "workbutton" class="button" onclick="closeNav()"><span style = "font-family: Arial Narrow">My work</span></button>
         <br>
-        <button id = "workexbutton" class="button" onclick="closeNav()"><span>Experience</span></button>
+        <button id = "workexbutton" class="button" onclick="closeNav()"><span style = "font-family: Arial Narrow">Experience</span></button>
         <br>
-        <button id = "contactmebutton" class="button" ><span>Contact Me</span></button>
+        <button id = "contactmebutton" class="button" ><span style = "font-family:Arial Narrow">Contact Me</span></button>
        
 
 
@@ -929,27 +894,52 @@ a:hover{
  <p class = "workheader"><i><b>Professional Experience</b></i></p>
   <ul class="workex">
 
-  <li> Working as a Web Designer and Developer (July 2017- Present) : 
-      <br/>Le Panier Francais
-      <br>
-       <br>
-      <p style="font-size:18px; color:#dbdbde; text-align: justify;
-    text-justify: inter-word; margin-right:25px;">Currently working as a sole web developer for this French company. I have designed and developed the entire user interface for their new online marketplace. We have used CMS Opencart with the default theme and I was responsible for customizing the complete web-store using HTML, CSS, JavaScript and PHP.
-    </p> 
+  	<li>
+  		<b>Working as Front End Software Engineer (April 2018-Present) :</b>
+  		<br/><b>ReStream Solutions</b>
+  		<br/>
+  		<ul style = "font-size: 15px">
+  			<li>Working on various D3 data visualizations for the web application</li>
+  			<li>Integrating new features on the live view and web app for the company</li>
+  			<li>Revamping the whole application using ReactJs </li>
+  			<li>Working in an agile/scrum environment with weekly sprint planning</li>
+  		</ul>
+  	</li>
+  	<br/>
 
-    </li>
-    <li> Working as a Web Developer (July 2017- Present) : 
-      <br/>Dormstall
+  <b><li>Working as a Web Designer and Developer (July 2017- April 2018) : </b>
+      <br/><b>Le Panier Francais</b>
       <br>
-       <br>
-      <p style="font-size:18px; color:#dbdbde; text-align: justify;
-    text-justify: inter-word; margin-right:25px;">We are trying to build an e-commerce web application using ReactJs and Bootstrap for the client side and Express and NodeJs for the back end. As a web developer, I am responsible for the full stack development of the application along with other developers. </p> 
+    	<ul style = "font-size: 15px">
+    		<li>Worked as the sole web developer for this e-commerce platform for French products</li>
+			<li>Designed and developed the entire user interface for their new online marketplace</li>
+			<li>Developed the mobile version for the marketplace</li>
+			<li>Using the default theme of Opencart CMS and am responsible for customizing the complete webstore</li>
+			<li>Technologies Used: Opencart, HTML, CSS, JavaScript, PHP</li>
+    	</ul>
+    </li><br/><br/>
 
+    <b><li> Working as a Web Developer (July 2017- Present) : </b>
+      <b><br/>Dormstall</b>
+       <br>
+     <ul style = "font-size: 15px">
+     	<li>Working as the only web designer and developer for a startup based in Texas that is trying to build a sell/trade platform</li>
+		<li>Responsible for the complete all-round development of the website </li>
+		<li>Have been a part of the team since beginning of the project</li>
+		<li>Worked on requirements and laying out a development plan for the product (website)</li>
+		<li>Completely designed the User Interface of the website</li>
+		<li>Translated designs into high quality code for front end using ReactJS</li>
+		<li>Worked on building numerous re-usable components for front end using ReactJS</li>
+		<li>Optimized the website for maximum performance across various devices and browsers</li>
+		<li>Coded the complete back-end of the website using NodeJS and Express</li>
+		<li>Worked on the MySQL database (creating the database, creating secure connections and encrypting sensitive data)</li>
+		<li>Technologies Used: ReactJS, NodeJS, Express, MySQL</li>
+     </ul>
     </li>
     <br>
 
-    <li> Graduate Research Assistant (August 2016 - December 2016) : 
-      <br/>Biomedical Visualization in UIC.
+    <li><b> Graduate Research Assistant (August 2016 - December 2016) : </b>
+      <br/><b>Biomedical Visualization in UIC.</b>
       <br>
        <br>
       <p style="font-size:18px; color:#dbdbde; text-align: justify;
@@ -957,8 +947,8 @@ a:hover{
 
     </li>
 <br>
-    <li> Summer Research Assistant (May 2016 - July 2016) : 
-      <br/>Electronic Visualization Laboratory 
+    <li><b> Summer Research Assistant (May 2016 - July 2016) : </b>
+      <br/><b>Electronic Visualization Laboratory </b>
       <br>
        <br>
       <p style="font-size:18px; color:#dbdbde; text-align: justify;
@@ -986,7 +976,7 @@ a:hover{
     background: -moz-linear-gradient(right, black, #4A4A4A); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, black , #4A4A4A); margin-top:2em;">
   <br>
-  <center><b><div class = "workheader"><center><i>Wanna get in touch?</i></center></div></b></center>
+  <center><b><div class = "workheader"><center><i>Get in touch</i></center></div></b></center>
   <br>
   <ul class="workex">
     <center>  <img src="email.png" style="width:100px;height:100px"> 
@@ -1016,10 +1006,11 @@ a:hover{
 <div class="modal-content">
     <div class="modal-header">
       
-      <center><h3>Paper prototypes</h3></center>
+      <center><h3>Prototypes</h3></center>
     </div>
 
 <center><div class="w3-content w3-section" style="max-width:500px">
+	<img class="mySlides" src="restreamsolutions.png" style="width:100%; height:400px">
   <img class="mySlides" src="1.jpg" style="width:80%; height:400px">
   <img class="mySlides" src="2.jpg" style="width:100%; height:400px">
   <img class="mySlides" src="3.jpeg" style="width:100%; height:400px">
@@ -1035,8 +1026,8 @@ a:hover{
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">X</button>
-                    <center><h4 class="modal-title">YouTube Video</h4></center>
+                    <button type="button" class="close" data-dismiss="modal">&#10005;</button>
+                    <h4 class="modal-title">YouTube Video</h4>
                 </div>
                 <div class="modal-body">
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/CM993E7BciE" frameborder="0" allowfullscreen></iframe></center>
@@ -1052,8 +1043,8 @@ a:hover{
             <div class="modal-content">
                 <div class="modal-header">
                    
-                    <button type="button" class="close" data-dismiss="modal">X</button>
-                    <center><h4 class="modal-title">YouTube Video</h4></center>
+                    <button type="button" class="close" data-dismiss="modal">&#10005;</button>
+                    <h4 class="modal-title">YouTube Video</h4>
                 </div>
                 <div class="modal-body">
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ZCsDBkPZm9A" frameborder="0" allowfullscreen></iframe></center>
@@ -1067,8 +1058,8 @@ a:hover{
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">X</button>
-                    <center><h4 class="modal-title">YouTube Video</h4></center>
+                    <button type="button" class="close" data-dismiss="modal">&#10005;</button>
+                    <h4 class="modal-title">YouTube Video</h4>
                 </div>
                 <div class="modal-body">
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/apPAsPvRJ5c" frameborder="0" allowfullscreen></iframe></center>
@@ -1148,16 +1139,13 @@ $("#homexbutton").click(function() {
 });
 var modal = document.getElementById('myModal');
 var modalsketch = document.getElementById('sketchmodal');
-var modalaboutme = document.getElementById('aboutmemodal');
 
 // Get the button that opens the modal
 var btn = document.getElementById("myImg");
 var btnsketches = document.getElementById("sketches");
-var btnaboutme = document.getElementById("aboutmebutton");
 
 var span = document.getElementsByClassName("close")[0];
 var spansketches = document.getElementsByClassName("closesketch")[0];
-var spanaboutme = document.getElementsByClassName("closeaboutme")[0];
 
 btn.onclick = function() {
     modal.style.display = "block";
@@ -1166,18 +1154,11 @@ btnsketches.onclick = function() {
     modalsketch.style.display = "block";
 }
 
-btnaboutme.onclick = function() {
-    modalaboutme.style.display = "block";
-}
-
 span.onclick = function() {
     modal.style.display = "none";
 }
 spansketches.onclick = function() {
     modalsketch.style.display = "none";
-}
-spanaboutme.onclick = function() {
-    modalaboutme.style.display = "none";
 }
 
 window.onclick = function(event) {
@@ -1191,11 +1172,6 @@ window.onclick = function(event) {
     }
 }
 
-window.onclick = function(event) {
-    if (event.target == modalaboutme) {
-        modalaboutme.style.display = "none";
-    }
-}
 
 $(document).ready(function(){
   
