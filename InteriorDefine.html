@@ -18,7 +18,7 @@
       <p class = "headline">TEGAN</p>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-offset-3" style = "position: absolute; top: 40vh"><p class = "introduction">Introducing our first curved-back sofa. Tegan’s profile traces a 
 graceful arc — it’s show-stopping, without being showy.</p></div>
-      <div style = "height: 52vh"><img class = "hero-image" src = "./images/Hero@1x.png" /></div>
+      <div style = "height: 52vh"><img class = "hero-image" src = "./Hero@1x.png" /></div>
       <p><button class = "customize start-custom">Start Customizing  &rarr;</button></p>
     </div>
   </div>
@@ -26,19 +26,19 @@ graceful arc — it’s show-stopping, without being showy.</p></div>
     <div id = "product-1" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 products product-1">
       <p class="product-name">Tegan Apartment Sofa</p>
       <p class="product-price">$1600</p>
-      <div class = "product-div"><img class = "product-image1" src = "./images/SofaRotated@1x.png" /></div>
+      <div class = "product-div"><img class = "product-image1" src = "./SofaRotated@1x.png" /></div>
       <p><button id = "customize1" class = "customize customize1" onmouseover = "hoverState(event)" onmouseout = "normalState(event)">Customize  &rarr;</button></p>
     </div>
     <div id = "product-2" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 products product-2">
       <p class="product-name">Tegan Accent Chair</p>
       <p class="product-price">$1100</p>
-      <div class = "product-div"><img class = "product-image2" src = "./images/ChairRotated@1x.png" /></div>
+      <div class = "product-div"><img class = "product-image2" src = "./ChairRotated@1x.png" /></div>
       <p><button id = "customize2" class = "customize customize2" onmouseover = "hoverState(event)" onmouseout = "normalState(event)">Customize  &rarr;</button></p>
     </div>
     <div id = "product-3" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 products product-1">
       <p class="product-name">Tegan Ottoman</p>
       <p class="product-price">$600</p>
-      <div class = "product-div"><img class = "product-image3" src = "./images/OttomanRotated@1x.png" /></div>
+      <div class = "product-div"><img class = "product-image3" src = "./OttomanRotated@1x.png" /></div>
       <p><button id = "customize3" class = "customize customize3" onmouseover = "hoverState(event)" onmouseout = "normalState(event)">Customize  &rarr;</button></p>
     </div>
   </div>
@@ -76,15 +76,15 @@ graceful arc — it’s show-stopping, without being showy.</p></div>
     switch(event.target.id){
       case 'customize1': 
         document.getElementById('product-1').style.backgroundColor = "rgba(21,21,21,0.1)";    
-        document.getElementsByClassName("product-image1")[0].src="./images/Sofa@1x.png";
+        document.getElementsByClassName("product-image1")[0].src="./Sofa@1x.png";
         break;
       case 'customize2': 
         document.getElementById('product-2').style.backgroundColor = "#E1DDDA";
-        document.getElementsByClassName("product-image2")[0].src="./images/Chair@1x.png";
+        document.getElementsByClassName("product-image2")[0].src="./Chair@1x.png";
         break;
       case 'customize3': 
         document.getElementById('product-3').style.backgroundColor = "rgba(21,21,21,0.1)";
-        document.getElementsByClassName("product-image3")[0].src="./images/Ottoman@1x.png";
+        document.getElementsByClassName("product-image3")[0].src="./Ottoman@1x.png";
         break;
 
     }
@@ -95,15 +95,15 @@ graceful arc — it’s show-stopping, without being showy.</p></div>
     switch(event.target.id){
       case 'customize1': 
         document.getElementById('product-1').style.backgroundColor = "#F2F2F2";
-        document.getElementsByClassName("product-image1")[0].src="./images/SofaRotated@1x.png";
+        document.getElementsByClassName("product-image1")[0].src="./SofaRotated@1x.png";
         break;
       case 'customize2': 
         document.getElementById('product-2').style.backgroundColor = "#FFF";
-        document.getElementsByClassName("product-image2")[0].src="./images/ChairRotated@1x.png";
+        document.getElementsByClassName("product-image2")[0].src="./ChairRotated@1x.png";
         break;
       case 'customize3': 
         document.getElementById('product-3').style.backgroundColor = "#F2F2F2";
-        document.getElementsByClassName("product-image3")[0].src="./images/OttomanRotated@1x.png";
+        document.getElementsByClassName("product-image3")[0].src="./OttomanRotated@1x.png";
         break;
 
     } 
